@@ -45,11 +45,14 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
         return category;
     }
 
-
+    // update category
     @Override
     public void update(int categoryId, Category category) {
-        // update category
+        String sql = "UPDATE categories SET name = ?, description = ? WHERE category_id = ?";
+        jdbcTemplate.update(sql,category.getName(),category.getDescription(),categoryId);
     }
+
+
 
     @Override
     public void delete(int categoryId) {

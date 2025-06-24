@@ -80,9 +80,6 @@ public class CategoriesController
         return new ResponseEntity<>(created, HttpStatus.CREATED); // return 201 Created
     }
 
-
-
-
     // add annotation to call this method for a PUT (update) action - the url path must include the categoryId
     @PutMapping("/{id}")
 
