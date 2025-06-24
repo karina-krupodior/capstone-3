@@ -49,15 +49,16 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
     @Override
     public void update(int categoryId, Category category) {
         String sql = "UPDATE categories SET name = ?, description = ? WHERE category_id = ?";
-        jdbcTemplate.update(sql,category.getName(),category.getDescription(),categoryId);
+        jdbcTemplate.update(sql, category.getName(), category.getDescription(), categoryId);
     }
-
 
 
     @Override
     public void delete(int categoryId) {
-        // delete category
+        String sql = "DELETE FROM categories WHERE category_id = ?";
+        jdbcTemplate.update(sql, categoryId);
     }
+
 
     private Category mapRow(ResultSet row) throws SQLException {
         int categoryId = row.getInt("category_id");
