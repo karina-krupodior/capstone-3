@@ -20,9 +20,13 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao
     @Override
     public List<Category> getAllCategories()
     {
-        // get all categories
-        return null;
+        String sql = "SELECT * FROM categories";
+        return jdbcTemplate.query(sql, (row, rowNum) -> mapRow(row));
+
     }
+
+
+
 
     @Override
     public Category getById(int categoryId)
