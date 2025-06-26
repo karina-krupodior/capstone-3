@@ -61,8 +61,10 @@ public class ProductsController
         }
     }
 
+
     @PostMapping()
     @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @ResponseStatus(HttpStatus.OK)
     public Product addProduct(@RequestBody Product product)
     {
         try
@@ -81,7 +83,7 @@ public class ProductsController
     {
         try
         {
-            productDao.create(product);
+            productDao.update(id, product); // update instead of create
         }
         catch(Exception ex)
         {
