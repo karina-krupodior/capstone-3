@@ -8,7 +8,7 @@ by fixing bugs and adding new features such as enhanced product filtering, categ
 
 ## 🖥️ Main Screen
 
-![Main screen of EasyShop application](./src/main/resources/homepage-main-screen.png)
+![Main screen of EasyShop application](./capstone-starter/src/main/resources/homepage-main-screen.png)
 
 
 
