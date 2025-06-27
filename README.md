@@ -8,8 +8,7 @@ by fixing bugs and adding new features such as enhanced product filtering, categ
 
 ## 🖥️ Main Screen
 
-![Main screen of EasyShop application](capstone-starter/src/main/resources/homepage-main-screen.png)
-
+![Main screen](./capstone-starter/src/main/resources/homepage-main-screen.png)
 
 
 > *This is the main screen of the EasyShop website, where users can browse product categories and start shopping.*
